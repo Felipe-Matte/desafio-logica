@@ -1,26 +1,35 @@
-let vitoria
-let derrota
+function nivelRanqueado (vitoria, derrota){
+    saldoTotal = vitoria - derrota
 
-function saldoDeVitoria() {
-   let resultado = vitoria - derrota
-   return console.log (resultado)
-}
+    let nivel
 
-function nivel(vitoria, derrota) {
-    let saldo = vitoria + derrota
-        if ( saldo >= 10) {
-            console.log ( "ferro")
-        } else if ( saldo <= 11 && saldo >= 20){
-            console.log = ("Brosnze")
-        } else if ( saldo >= 21 && saldo <= 50){
-            console.log = ( "Prata")
-        } else if ( saldo >=51 && saldo <= 80 ){
-            console.log = ( "Ouro")
-        } else if ( saldo >= 81 && saldo <= 90){
-            console.log = ( "Diamente")
-        } else if ( saldo >= 91 && saldo <= 100){
-            console.log = ( "Imortal")
-        }
-}
+    if ( saldoTotal <= 10) {
+        nivel = "Ferro"
+    } else if ( saldoTotal >= 11 && saldoTotal <= 20){
+        nivel = "Bronze"
+    } else if (saldoTotal >= 21 && saldoTotal <= 50){ 
+        nivel = "Prata"
+    } else if (saldoTotal >= 51 && saldoTotal <= 80){
+        nivel = "Ouro"
+    } else if ( saldoTotal >=81 && saldoTotal <= 90){
+        nivel = "Diamente"
+    } else if (saldoTotal >= 91 && saldoTotal >= 100){
+        nivel = "Lendário"
+    } 
+    else nivel = "Imortal"
 
-console.log =( " O Heroi tem de saldo " + saldoDeVitoria + "e esta no nivel de " + nivel )
+        return console.log ( "O Herói está com saldo de " + saldoTotal + " e está no nivel " + nivel)
+
+    }
+
+    
+
+    
+
+
+
+let vitoria = 100
+let derrota = 23
+
+const resultado = nivelRanqueado (vitoria, derrota)
+console.log (resultado)
